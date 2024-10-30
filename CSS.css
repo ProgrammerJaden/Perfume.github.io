@@ -1,0 +1,118 @@
+/* Resetting margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 25px;
+    padding-right: 30px;
+    background-color: transparent;
+}
+nav .logo {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Main Body Styling*/
+body{
+    font-family: sans-serif;
+    background-color:black;
+
+}
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    color: white;
+    padding:200px 100px;
+    height: 700px;
+    background-image: url(Pic1.4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+/* About Section Styling */
+#about {
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+    height: 350px;
+}
+
+#products{
+    padding-top: 100px;
+}
+#products h2{
+color: white;
+text-align: center;
+}
+
+/* Carousel Styling */
+.carousel {
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    height: 700px;
+}
+.carousel-item {
+    display: none;
+    width: 100%;
+}
+.carousel-item.active {
+    display: block;
+}
+.carousel img {
+    width: 350px;
+    height: auto;
+}
+
+/*Arrows*/
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:transparent;
+    color: black;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+}
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}   
