@@ -1,21 +1,52 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-item');
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Business</title>
+    <link rel="stylesheet" href="CSS.css">
+    
+</head>
+<body>
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-}
+    <!-- Navbar -->
+    <nav>
+        <a href="#home" class="logo">PerfumeCo</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Experience the Essence of Luxury</h1>
+        <p>Find the perfect fragrance that defines you.</p>
+    </section>
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We sell perfumes that are cheap and authentic.</p>
+    </section>
 
-// Initialize carousel
-showSlide(currentSlide);
+    <!-- Product Carousel Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="carousel">
+            <div class="carousel-item active"><img src="Pic1.1.jpg" alt="Perfume 1"></div>
+            <div class="carousel-item"><img src="Pic2.1.jpg" alt="Perfume 2"></div>
+            <div class="carousel-item"><img src="Pic3.1.jpg" alt="Perfume 3"></div>
+            <button class="carousel-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PerfumeCo. All rights reserved.</p>
+    </footer>
+
+    <script src="JS.js"></script>
+</body>
+</html>
